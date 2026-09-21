@@ -452,7 +452,9 @@ h2 em {
 
   max-width: 800px;
 
-  padding: 130px 25px;
+  max-width: 900px;
+
+  padding: clamp(120px, 15vw, 220px) 25px;
 
   margin: auto;
 
@@ -476,14 +478,9 @@ h2 em {
 
 .gallery-section {
 
-  padding: 100px 6vw;
+  padding: clamp(90px, 11vw, 170px) 6vw;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.55),
-      rgba(236,224,207,.8)
-    );
+  background: var(--cream);
 
 }
 
@@ -557,9 +554,11 @@ h2 em {
   display: grid;
 
   grid-template-columns:
-    repeat(4, minmax(0, 1fr));
+    repeat(3, minmax(0, 1fr));
 
-  gap: 26px;
+  gap: clamp(45px, 5vw, 90px) 28px;
+
+  align-items: start;
 
 }
 
@@ -573,21 +572,21 @@ h2 em {
 
 .art-image {
 
+  display: block;
+
   width: 100%;
 
   border: 0;
 
   padding: 0;
 
-  background: #fff;
+  background: transparent;
 
   cursor: pointer;
 
   position: relative;
 
   overflow: hidden;
-
-  aspect-ratio: 4 / 5;
 
 }
 
@@ -596,24 +595,26 @@ h2 em {
 
   width: 100%;
 
-  height: 100%;
+  height: auto;
 
   display: block;
 
-  object-fit: cover;
+  object-fit: contain;
+
+  background: transparent;
 
   transition:
-    transform .7s ease,
-    filter .7s ease;
+    transform .8s cubic-bezier(.2,.65,.2,1),
+    filter .8s ease;
 
 }
 
 
 .art-card:hover img {
 
-  transform: scale(1.045);
+  transform: scale(1.018);
 
-  filter: saturate(1.08);
+  filter: saturate(1.035);
 
 }
 
@@ -626,15 +627,21 @@ h2 em {
 
   top: 14px;
 
-  padding: 6px 9px;
+  padding: 0;
 
-  background: rgba(23,18,14,.78);
+  background: transparent;
 
   color: white;
 
-  border-radius: 999px;
+  border-radius: 0;
 
-  font-size: 10px;
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
 
 }
 
@@ -647,21 +654,25 @@ h2 em {
 
   right: 16px;
 
-  background: rgba(255,255,255,.92);
+  background: rgba(251,248,241,.94);
 
   color: var(--ink);
 
-  padding: 8px 12px;
+  padding: 9px 13px;
 
-  border-radius: 999px;
+  border-radius: 0;
 
   opacity: 0;
 
   transform: translateY(8px);
 
-  transition: .3s;
+  transition: opacity .35s ease, transform .35s ease;
 
-  font-size: 11px;
+  font-size: 10px;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
 
 }
 
@@ -677,7 +688,7 @@ h2 em {
 
 .art-info {
 
-  padding: 17px 2px 35px;
+  padding: 18px 3px 42px;
 
 }
 
@@ -703,11 +714,13 @@ h2 em {
     "Cormorant Garamond",
     serif;
 
-  font-size: 27px;
+  font-size: clamp(25px, 2.3vw, 34px);
 
-  font-weight: 600;
+  font-weight: 500;
 
-  margin: 7px 0;
+  line-height: 1;
+
+  margin: 8px 0;
 
 }
 
@@ -716,9 +729,11 @@ h2 em {
 
   color: var(--muted);
 
+  max-width: 34em;
+
   font-size: 12px;
 
-  line-height: 1.6;
+  line-height: 1.7;
 
   margin: 0;
 
@@ -1136,7 +1151,9 @@ footer > div:not(.footer-brand) {
   .gallery {
 
     grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+      repeat(2, minmax(0, 1fr));
+
+    gap: 55px 22px;
 
   }
 
@@ -1186,6 +1203,8 @@ footer > div:not(.footer-brand) {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
 
+    gap: 42px 16px;
+
   }
 
   .artist {
@@ -1220,6 +1239,8 @@ footer > div:not(.footer-brand) {
   .gallery {
 
     grid-template-columns: 1fr;
+
+    gap: 58px;
 
   }
 

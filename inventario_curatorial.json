@@ -1,0 +1,830 @@
+[
+  {
+    "id": 1,
+    "title": "Mirada de infancia",
+    "category": "retratos",
+    "image": "https://i.ibb.co/rRJ3fGND/IMG-20260816-WA0008.jpg",
+    "description_actual": "Retrato infantil realizado con una delicada exploración del color.",
+    "descripcion_visual": "Retrato vertical de un niño de cabello claro y ojos azules, vestido en tonos violetas. El rostro ocupa buena parte de la composición y se recorta sobre un fondo luminoso de verdes y azules suaves.",
+    "lectura": "",
+    "alt_text": "Retrato de un niño de cabello claro y ojos azules, vestido de violeta, sobre un fondo luminoso de tonos verdes y azules.",
+    "palabras_clave": [
+      "infancia",
+      "retrato",
+      "mirada",
+      "color",
+      "intimidad"
+    ],
+    "obras_relacionadas": [
+      4,
+      25
+    ],
+    "lectura_curatorial": "La frontalidad del retrato concentra la atención en la mirada y en la presencia del niño. La combinación de violetas, azules y verdes construye una atmósfera íntima y serena.",
+    "elementos_visuales": [
+      "retrato infantil",
+      "mirada",
+      "violeta",
+      "azul",
+      "verde",
+      "fondo luminoso"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 2,
+    "title": "Pasión y esperanza",
+    "category": "religioso",
+    "image": "https://i.ibb.co/Ng3Z6S9K/IMG-20260816-WA0006.jpg",
+    "description_actual": "Composición de carácter religioso llena de símbolos y color.",
+    "descripcion_visual": "Composición vertical de inspiración religiosa en la que aparecen figuras humanas, una cruz y una escena de fuerte carga espiritual. Predominan tonos ocres, marrones, azules y violetas.",
+    "lectura": "",
+    "alt_text": "Composición religiosa con figuras humanas y una cruz, trabajada con tonos ocres, marrones, azules y violetas.",
+    "palabras_clave": [
+      "pasión",
+      "esperanza",
+      "cruz",
+      "espiritualidad",
+      "oración"
+    ],
+    "obras_relacionadas": [
+      3,
+      12,
+      16,
+      18,
+      25
+    ],
+    "lectura_curatorial": "La composición reúne elementos asociados al sufrimiento, la oración y la esperanza. La concentración de figuras y símbolos conduce la mirada hacia el centro espiritual de la escena.",
+    "elementos_visuales": [
+      "cruz",
+      "figuras humanas",
+      "oración",
+      "ocres",
+      "azules",
+      "violetas"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 3,
+    "title": "El Buen Pastor",
+    "category": "religioso",
+    "image": "https://i.ibb.co/1NfhvhG/IMG-20260816-WA0009.jpg",
+    "description_actual": "Interpretación artística de una escena bíblica.",
+    "descripcion_visual": "Escena vertical de inspiración bíblica con una figura central que sostiene un cordero, rodeada por un paisaje verde y otros animales. Un árbol de gran presencia ocupa parte de la composición.",
+    "lectura": "",
+    "alt_text": "Figura de inspiración bíblica sosteniendo un cordero en un paisaje verde acompañado por otros animales y un gran árbol.",
+    "palabras_clave": [
+      "Buen Pastor",
+      "cordero",
+      "cuidado",
+      "naturaleza",
+      "espiritualidad"
+    ],
+    "obras_relacionadas": [
+      16,
+      18,
+      19
+    ],
+    "lectura_curatorial": "La relación entre la figura central, el cordero y el entorno natural construye una imagen de cuidado y protección. El paisaje funciona como espacio de encuentro entre lo espiritual y lo natural.",
+    "elementos_visuales": [
+      "figura central",
+      "cordero",
+      "animales",
+      "árbol",
+      "paisaje verde"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 4,
+    "title": "Oración",
+    "category": "religioso",
+    "image": "https://i.ibb.co/93mzGN93/IMG-20260816-WA0010.jpg",
+    "description_actual": "Retrato de una figura infantil en actitud de oración.",
+    "descripcion_visual": "Retrato vertical de una figura infantil con las manos juntas en actitud de oración. La vestimenta clara contrasta con un fondo de tonos blancos, grises y azules.",
+    "lectura": "",
+    "alt_text": "Figura infantil con las manos juntas en actitud de oración, vestida con tonos claros sobre un fondo blanco, gris y azul.",
+    "palabras_clave": [
+      "oración",
+      "infancia",
+      "espiritualidad",
+      "recogimiento",
+      "retrato"
+    ],
+    "obras_relacionadas": [
+      1,
+      25
+    ],
+    "lectura_curatorial": "La postura de las manos y la quietud de la figura concentran la obra en el gesto de oración. La paleta clara refuerza una sensación de recogimiento y silencio.",
+    "elementos_visuales": [
+      "figura infantil",
+      "manos juntas",
+      "oración",
+      "blanco",
+      "azul"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 5,
+    "title": "Naturaleza en color",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/LdmHB3WW/IMG-20260816-WA0011.jpg",
+    "description_actual": "Una interpretación vibrante de la fuerza de la naturaleza.",
+    "descripcion_visual": "Composición horizontal dominada por la figura de un gran felino. El animal aparece construido mediante una paleta intensa de amarillos, rojos, azules, verdes, rosas y naranjas.",
+    "lectura": "",
+    "alt_text": "Gran felino representado con una paleta intensa de amarillos, rojos, azules, verdes, rosas y naranjas.",
+    "palabras_clave": [
+      "naturaleza",
+      "fauna",
+      "color",
+      "felino",
+      "expresión"
+    ],
+    "obras_relacionadas": [
+      8,
+      9,
+      14,
+      26
+    ],
+    "lectura_curatorial": "Aquí el color adquiere un papel estructural: transforma la representación del animal y convierte su presencia en el principal acontecimiento visual de la obra.",
+    "elementos_visuales": [
+      "felino",
+      "color intenso",
+      "amarillo",
+      "rojo",
+      "azul",
+      "verde",
+      "rosa"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 6,
+    "title": "Camino de luz",
+    "category": "paisajes",
+    "image": "https://i.ibb.co/gMf2frdM/IMG-20260816-WA0012.jpg",
+    "description_actual": "Paisaje luminoso donde naturaleza y arquitectura se encuentran.",
+    "descripcion_visual": "Paisaje vertical con una figura humana vista desde atrás y con los brazos abiertos, situada en un camino que conduce hacia una zona luminosa. Alrededor aparecen viviendas, vegetación y elementos del entorno.",
+    "lectura": "",
+    "alt_text": "Figura humana de espaldas y con los brazos abiertos en un camino luminoso rodeado de vegetación y viviendas.",
+    "palabras_clave": [
+      "camino",
+      "luz",
+      "paisaje",
+      "contemplación",
+      "tránsito"
+    ],
+    "obras_relacionadas": [
+      18,
+      19,
+      21,
+      22,
+      24
+    ],
+    "lectura_curatorial": "El camino organiza la perspectiva y conduce visualmente hacia la luz. La figura abierta al paisaje puede leerse como una imagen de tránsito, búsqueda o contemplación, sin cerrar una única interpretación.",
+    "elementos_visuales": [
+      "camino",
+      "figura humana",
+      "luz",
+      "vegetación",
+      "viviendas",
+      "perspectiva"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 7,
+    "title": "Noche sobre el agua",
+    "category": "paisajes",
+    "image": "https://i.ibb.co/h19PhnHZ/IMG-20260816-WA0005.jpg",
+    "description_actual": "Paisaje nocturno construido alrededor del agua y la luz.",
+    "descripcion_visual": "Paisaje nocturno vertical construido alrededor de un cuerpo de agua azul, una luna luminosa y una pequeña embarcación. Ramas oscuras enmarcan parte de la escena.",
+    "lectura": "",
+    "alt_text": "Paisaje nocturno con luna sobre un cuerpo de agua azul, una pequeña embarcación y ramas oscuras en primer plano.",
+    "palabras_clave": [
+      "noche",
+      "agua",
+      "luna",
+      "paisaje",
+      "contemplación"
+    ],
+    "obras_relacionadas": [
+      19,
+      21,
+      23
+    ],
+    "lectura_curatorial": "La luna y su reflejo convierten el agua en el eje de la composición. El contraste entre la oscuridad del entorno y los azules luminosos crea una atmósfera de silencio y contemplación.",
+    "elementos_visuales": [
+      "luna",
+      "agua",
+      "embarcación",
+      "ramas",
+      "noche",
+      "reflejo"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 8,
+    "title": "Ave entre ramas",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/v6jmvgBR/IMG-20260816-WA0013.jpg",
+    "description_actual": "Estudio de aves y vegetación.",
+    "descripcion_visual": "Composición horizontal con pequeñas aves de tonos azules, blancos y anaranjados entre ramas y vegetación.",
+    "lectura": "",
+    "alt_text": "Dos pequeñas aves de tonos azules, blancos y anaranjados entre ramas y vegetación.",
+    "palabras_clave": [
+      "aves",
+      "naturaleza",
+      "vegetación",
+      "color",
+      "fauna"
+    ],
+    "obras_relacionadas": [
+      9,
+      10,
+      14,
+      15,
+      20
+    ],
+    "lectura_curatorial": "Las aves funcionan como puntos de atención dentro de una estructura vegetal. El diálogo entre sus colores y el follaje da a la escena una sensación de movimiento y vida.",
+    "elementos_visuales": [
+      "aves",
+      "ramas",
+      "vegetación",
+      "azul",
+      "blanco",
+      "naranja"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 9,
+    "title": "Aves de colores",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/Ps0Hbztc/IMG-20260816-WA0014.jpg",
+    "description_actual": "Observación de aves en una composición llena de color.",
+    "descripcion_visual": "Composición horizontal con dos aves de colores azul, naranja y blanco entre ramas y hojas.",
+    "lectura": "",
+    "alt_text": "Dos aves de colores azul, naranja y blanco posadas entre ramas y hojas.",
+    "palabras_clave": [
+      "aves",
+      "color",
+      "naturaleza",
+      "ramas",
+      "fauna"
+    ],
+    "obras_relacionadas": [
+      8,
+      10,
+      14,
+      20
+    ],
+    "lectura_curatorial": "La obra convierte la observación de las aves en un estudio de color y equilibrio. Las figuras destacan sobre el entramado vegetal y crean una escena dinámica.",
+    "elementos_visuales": [
+      "dos aves",
+      "ramas",
+      "hojas",
+      "azul",
+      "naranja",
+      "blanco"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 10,
+    "title": "Encuentro",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/chVpBYzQ/IMG-20260816-WA0015.jpg",
+    "description_actual": "Dos aves protagonizan una escena íntima y delicada.",
+    "descripcion_visual": "Dos aves de tonos turquesa, rosados y violetas aparecen sobre una rama. Sus picos se aproximan en el centro de la composición.",
+    "lectura": "",
+    "alt_text": "Dos aves de tonos turquesa, rosados y violetas sobre una rama, con los picos próximos.",
+    "palabras_clave": [
+      "encuentro",
+      "aves",
+      "naturaleza",
+      "color",
+      "intimidad"
+    ],
+    "obras_relacionadas": [
+      8,
+      9,
+      14
+    ],
+    "lectura_curatorial": "La proximidad de las dos aves concentra la escena en un gesto de encuentro. Los colores suaves y la disposición horizontal refuerzan la sensación de intimidad.",
+    "elementos_visuales": [
+      "dos aves",
+      "rama",
+      "turquesa",
+      "rosa",
+      "violeta",
+      "encuentro"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 11,
+    "title": "Flamencos al atardecer",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/zHFcFYrL/IMG-20260816-WA0017.jpg",
+    "description_actual": "Fauna y paisaje reunidos alrededor de la luz del atardecer.",
+    "descripcion_visual": "Dos flamencos aparecen sobre el agua durante el atardecer. La luz del sol se refleja en la superficie y combina tonos rosados, azules, naranjas y violetas.",
+    "lectura": "",
+    "alt_text": "Dos flamencos sobre el agua durante un atardecer, con reflejos y tonos rosados, azules, naranjas y violetas.",
+    "palabras_clave": [
+      "flamencos",
+      "agua",
+      "atardecer",
+      "reflejo",
+      "naturaleza"
+    ],
+    "obras_relacionadas": [
+      7,
+      15,
+      19,
+      23
+    ],
+    "lectura_curatorial": "La escena une fauna, agua y luz en una composición atmosférica. El reflejo amplía visualmente la presencia de los flamencos y convierte el atardecer en parte esencial de la obra.",
+    "elementos_visuales": [
+      "flamencos",
+      "agua",
+      "atardecer",
+      "reflejo",
+      "rosa",
+      "naranja"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 12,
+    "title": "Luz entre las sombras",
+    "category": "religioso",
+    "image": "https://i.ibb.co/RtRY47P/IMG-20260816-WA0007.jpg",
+    "description_actual": "Interpretación simbólica de una escena religiosa.",
+    "descripcion_visual": "Escena religiosa horizontal en tonos marrones y dorados. Una figura central aparece rodeada por una zona luminosa y elementos arquitectónicos y naturales.",
+    "lectura": "",
+    "alt_text": "Escena religiosa con una figura central iluminada, rodeada de tonos marrones y dorados y elementos arquitectónicos y naturales.",
+    "palabras_clave": [
+      "espiritualidad",
+      "luz",
+      "religioso",
+      "contemplación",
+      "ocres"
+    ],
+    "obras_relacionadas": [
+      2,
+      3,
+      16,
+      25
+    ],
+    "lectura_curatorial": "La luz concentra la atención en la figura central y establece un contraste con las zonas más oscuras. La composición puede leerse como una exploración visual de presencia, revelación y recogimiento.",
+    "elementos_visuales": [
+      "figura central",
+      "luz",
+      "halo",
+      "arquitectura",
+      "naturaleza",
+      "ocres"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 13,
+    "title": "Encuentro espiritual",
+    "category": "religioso",
+    "image": "https://i.ibb.co/VpzpjYpy/IMG-20260816-WA0018.jpg",
+    "description_actual": "Una composición de inspiración espiritual.",
+    "descripcion_visual": "Paisaje vertical con un camino que atraviesa una zona boscosa. Una figura humana y un animal de carga aparecen en el sendero mientras el paisaje se abre hacia el fondo.",
+    "lectura": "",
+    "alt_text": "Figura humana y animal de carga recorren un camino entre árboles que se abre hacia un paisaje lejano.",
+    "palabras_clave": [
+      "camino",
+      "paisaje",
+      "bosque",
+      "viaje",
+      "naturaleza"
+    ],
+    "obras_relacionadas": [
+      6,
+      18,
+      19,
+      22
+    ],
+    "lectura_curatorial": "El camino funciona como eje narrativo y espacial. La presencia humana dentro del paisaje sugiere tránsito y acompañamiento, mientras la apertura del fondo prolonga la mirada.",
+    "elementos_visuales": [
+      "camino",
+      "bosque",
+      "figura humana",
+      "animal",
+      "profundidad"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 14,
+    "title": "Colibríes y flores",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/CKX7KF3N/IMG-20260816-WA0016.jpg",
+    "description_actual": "Color, movimiento y naturaleza en una misma escena.",
+    "descripcion_visual": "Dos colibríes aparecen entre flores y follaje. La composición reúne verdes, azules, rojos, violetas, amarillos y rosados.",
+    "lectura": "",
+    "alt_text": "Dos colibríes entre flores y follaje en una composición de verdes, azules, rojos, violetas y rosados.",
+    "palabras_clave": [
+      "colibríes",
+      "flores",
+      "naturaleza",
+      "color",
+      "movimiento"
+    ],
+    "obras_relacionadas": [
+      8,
+      9,
+      10,
+      20
+    ],
+    "lectura_curatorial": "El movimiento de los colibríes y la diversidad cromática convierten la escena natural en una celebración visual del color y la vitalidad.",
+    "elementos_visuales": [
+      "colibríes",
+      "flores",
+      "follaje",
+      "verde",
+      "azul",
+      "rojo",
+      "violeta"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 15,
+    "title": "Ave sobre el agua",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/JWzkJbcP/IMG-20260816-WA0019.jpg",
+    "description_actual": "Estudio de fauna junto a un paisaje acuático.",
+    "descripcion_visual": "Ave situada junto a un cuerpo de agua, con ramas y vegetación enmarcando la escena. El fondo combina cielo, agua y elementos naturales.",
+    "lectura": "",
+    "alt_text": "Ave junto a un cuerpo de agua, rodeada por ramas y vegetación con cielo y paisaje al fondo.",
+    "palabras_clave": [
+      "ave",
+      "agua",
+      "fauna",
+      "paisaje",
+      "naturaleza"
+    ],
+    "obras_relacionadas": [
+      11,
+      19,
+      21,
+      23
+    ],
+    "lectura_curatorial": "La obra organiza la mirada desde el ave hacia el paisaje acuático del fondo. La relación entre primer plano y profundidad convierte la observación de la fauna en una experiencia espacial.",
+    "elementos_visuales": [
+      "ave",
+      "agua",
+      "ramas",
+      "vegetación",
+      "cielo",
+      "profundidad"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 16,
+    "title": "El Pastor y el cordero",
+    "category": "religioso",
+    "image": "https://i.ibb.co/HpP1FvhD/IMG-20260816-WA0021.jpg",
+    "description_actual": "Escena de inspiración cristiana.",
+    "descripcion_visual": "Figura de inspiración cristiana que sostiene un cordero contra el pecho. La composición utiliza tonos cálidos y una zona circular de luz alrededor de la cabeza.",
+    "lectura": "",
+    "alt_text": "Figura de inspiración cristiana sosteniendo un cordero contra el pecho, rodeada por una zona circular de luz.",
+    "palabras_clave": [
+      "Pastor",
+      "cordero",
+      "protección",
+      "espiritualidad",
+      "luz"
+    ],
+    "obras_relacionadas": [
+      3,
+      12,
+      25
+    ],
+    "lectura_curatorial": "El contacto entre la figura y el cordero concentra la obra en una imagen de cuidado. La luz circular refuerza la dimensión espiritual sin reducir la escena a una única lectura.",
+    "elementos_visuales": [
+      "figura religiosa",
+      "cordero",
+      "halo",
+      "luz cálida",
+      "gesto de protección"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 17,
+    "title": "Vuelo",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/tTQzDZw4/IMG-20260816-WA0022.jpg",
+    "description_actual": "Estudio de un ave en pleno vuelo.",
+    "descripcion_visual": "Ave de gran tamaño representada de frente o en pleno vuelo, con las alas extendidas y una combinación de tonos marrones, blancos y oscuros.",
+    "lectura": "",
+    "alt_text": "Ave de gran tamaño con las alas extendidas, representada en tonos marrones, blancos y oscuros.",
+    "palabras_clave": [
+      "vuelo",
+      "ave",
+      "naturaleza",
+      "fauna",
+      "movimiento"
+    ],
+    "obras_relacionadas": [
+      8,
+      14,
+      20,
+      26
+    ],
+    "lectura_curatorial": "La extensión de las alas ocupa gran parte del campo visual y convierte el vuelo en el principal gesto compositivo. La escala de la figura produce una presencia poderosa dentro del paisaje.",
+    "elementos_visuales": [
+      "ave",
+      "alas",
+      "vuelo",
+      "marrón",
+      "blanco",
+      "contraste"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 18,
+    "title": "Encuentro junto al mar",
+    "category": "religioso",
+    "image": "https://i.ibb.co/SXJf4NbB/IMG-20260816-WA0020.jpg",
+    "description_actual": "Paisaje de inspiración espiritual.",
+    "descripcion_visual": "",
+    "lectura": "",
+    "alt_text": "Obra titulada «Encuentro junto al mar» de Bernardo León Mejía Rivera.",
+    "palabras_clave": [
+      "encuentro",
+      "mar",
+      "espiritualidad"
+    ],
+    "obras_relacionadas": [
+      3,
+      6,
+      19,
+      23
+    ],
+    "lectura_curatorial": "",
+    "elementos_visuales": [],
+    "estado_curatorial": "pendiente_verificacion"
+  },
+  {
+    "id": 19,
+    "title": "Horizonte",
+    "category": "paisajes",
+    "image": "https://i.ibb.co/QvbkQ9dW/IMG-20260819-WA0016.jpg",
+    "description_actual": "Paisaje abierto donde cielo, agua y tierra dialogan.",
+    "descripcion_visual": "Paisaje vertical en el que cielo, agua y tierra se encuentran. Aparecen figuras humanas junto al agua, vegetación en un extremo y una forma de ave clara en el cielo.",
+    "lectura": "",
+    "alt_text": "Paisaje con horizonte, agua y tierra, figuras humanas, vegetación y una forma de ave clara en el cielo.",
+    "palabras_clave": [
+      "horizonte",
+      "agua",
+      "paisaje",
+      "espiritualidad",
+      "contemplación"
+    ],
+    "obras_relacionadas": [
+      2,
+      3,
+      7,
+      15,
+      21,
+      23
+    ],
+    "lectura_curatorial": "La amplitud del horizonte permite que la escena reúna paisaje y elementos de inspiración espiritual. La relación entre cielo, agua y figuras humanas abre una lectura contemplativa.",
+    "elementos_visuales": [
+      "horizonte",
+      "agua",
+      "cielo",
+      "tierra",
+      "figuras humanas",
+      "palmera"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 20,
+    "title": "Pequeños habitantes",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/XrXSzVK1/IMG-20260820-WA0014.jpg",
+    "description_actual": "Estudio de aves y vegetación.",
+    "descripcion_visual": "Composición horizontal con dos aves pequeñas posadas sobre una gran hoja verde. Sus cuerpos reúnen tonos rojos, marrones, negros y crema.",
+    "lectura": "",
+    "alt_text": "Dos aves pequeñas de tonos rojos, marrones, negros y crema posadas sobre una gran hoja verde.",
+    "palabras_clave": [
+      "aves",
+      "naturaleza",
+      "hoja",
+      "fauna",
+      "color"
+    ],
+    "obras_relacionadas": [
+      8,
+      9,
+      14,
+      17
+    ],
+    "lectura_curatorial": "La gran hoja crea una base visual para las aves y permite que sus colores destaquen. La escena convierte un pequeño fragmento de naturaleza en el centro de atención.",
+    "elementos_visuales": [
+      "dos aves",
+      "hoja verde",
+      "rojo",
+      "marrón",
+      "negro",
+      "crema"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 21,
+    "title": "Paisaje de agua",
+    "category": "paisajes",
+    "image": "https://i.ibb.co/h1fbX5bK/IMG-20260824-WA0001.jpg",
+    "description_actual": "Paisaje natural trabajado con una paleta luminosa.",
+    "descripcion_visual": "",
+    "lectura": "",
+    "alt_text": "Obra titulada «Paisaje de agua» de Bernardo León Mejía Rivera.",
+    "palabras_clave": [
+      "naturaleza",
+      "fauna",
+      "paisaje",
+      "agua"
+    ],
+    "obras_relacionadas": [
+      7,
+      15,
+      19,
+      23
+    ],
+    "lectura_curatorial": "",
+    "elementos_visuales": [],
+    "estado_curatorial": "requiere_revision_titulo"
+  },
+  {
+    "id": 22,
+    "title": "Memoria del paisaje",
+    "category": "paisajes",
+    "image": "https://i.ibb.co/dw9mW6m2/IMG-20260823-WA0006.jpg",
+    "description_actual": "Una composición de naturaleza y paisaje.",
+    "descripcion_visual": "",
+    "lectura": "",
+    "alt_text": "Obra titulada «Memoria del paisaje» de Bernardo León Mejía Rivera.",
+    "palabras_clave": [
+      "paisaje",
+      "memoria",
+      "naturaleza"
+    ],
+    "obras_relacionadas": [
+      6,
+      13,
+      19,
+      24
+    ],
+    "lectura_curatorial": "",
+    "elementos_visuales": [],
+    "estado_curatorial": "pendiente_verificacion"
+  },
+  {
+    "id": 23,
+    "title": "Lago bajo la luna",
+    "category": "paisajes",
+    "image": "https://i.ibb.co/HL5vWGHh/IMG-20260825-WA0020.jpg",
+    "description_actual": "Paisaje nocturno construido alrededor de agua y luz.",
+    "descripcion_visual": "Paisaje nocturno vertical con un cuerpo de agua iluminado por la luna. Una silueta de árbol y ramas aparece enmarcando parte de la escena.",
+    "lectura": "",
+    "alt_text": "Paisaje nocturno con un lago iluminado por la luna y la silueta de un árbol en primer plano.",
+    "palabras_clave": [
+      "lago",
+      "luna",
+      "noche",
+      "agua",
+      "paisaje"
+    ],
+    "obras_relacionadas": [
+      7,
+      11,
+      15,
+      19
+    ],
+    "lectura_curatorial": "La luna establece el foco luminoso y su reflejo organiza el paisaje. La escena trabaja el contraste entre oscuridad, agua y luz para construir una atmósfera contemplativa.",
+    "elementos_visuales": [
+      "luna",
+      "lago",
+      "agua",
+      "árbol",
+      "noche",
+      "reflejo"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 24,
+    "title": "Naturaleza en contemplación",
+    "category": "paisajes",
+    "image": "https://i.ibb.co/GQG4bgVD/IMG-20260826-WA0004.jpg",
+    "description_actual": "Una interpretación personal del paisaje.",
+    "descripcion_visual": "Paisaje vertical de vegetación en el que aparece un caballo blanco desplazándose entre árboles y zonas verdes.",
+    "lectura": "",
+    "alt_text": "Caballo blanco entre árboles y vegetación en un paisaje natural.",
+    "palabras_clave": [
+      "caballo",
+      "naturaleza",
+      "bosque",
+      "paisaje",
+      "fauna"
+    ],
+    "obras_relacionadas": [
+      5,
+      13,
+      17,
+      26
+    ],
+    "lectura_curatorial": "La figura del caballo establece un contraste claro con el entorno vegetal. La escena puede contemplarse como un encuentro entre fauna, movimiento y paisaje.",
+    "elementos_visuales": [
+      "caballo",
+      "bosque",
+      "vegetación",
+      "blanco",
+      "paisaje"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 25,
+    "title": "Contemplación",
+    "category": "religioso",
+    "image": "https://i.ibb.co/q33TJhW5/IMG-20260829-WA0004.jpg",
+    "description_actual": "Retrato de inspiración religiosa.",
+    "descripcion_visual": "Retrato vertical de un hombre barbado con los ojos cerrados o entrecerrados. El rostro aparece en tonos predominantemente grises y cálidos, acompañado por un símbolo de cruz.",
+    "lectura": "",
+    "alt_text": "Retrato cercano de un hombre barbado con los ojos cerrados o entrecerrados y una cruz visible en la composición.",
+    "palabras_clave": [
+      "contemplación",
+      "retrato",
+      "espiritualidad",
+      "cruz",
+      "rostro"
+    ],
+    "obras_relacionadas": [
+      2,
+      4,
+      12,
+      16
+    ],
+    "lectura_curatorial": "La cercanía del rostro y la expresión contenida orientan la obra hacia la contemplación. La presencia de la cruz introduce una dimensión espiritual reconocible en la composición.",
+    "elementos_visuales": [
+      "rostro",
+      "barba",
+      "ojos cerrados",
+      "cruz",
+      "grises",
+      "tonos cálidos"
+    ],
+    "estado_curatorial": "revisado"
+  },
+  {
+    "id": 26,
+    "title": "Espíritu de la montaña",
+    "category": "naturaleza",
+    "image": "https://i.ibb.co/GQV8DxDw/IMG-20260916-WA0003.jpg",
+    "description_actual": "Fauna y paisaje unidos en una composición simbólica.",
+    "descripcion_visual": "Composición vertical y simbólica con un oso de frente en tonos azules, violetas y púrpuras. Dentro y alrededor de la figura aparecen referencias a montaña, agua, árboles y pequeños animales.",
+    "lectura": "",
+    "alt_text": "Oso representado frontalmente en tonos azules y violetas, integrado con referencias a montañas, agua, árboles y pequeños animales.",
+    "palabras_clave": [
+      "oso",
+      "montaña",
+      "naturaleza",
+      "fauna",
+      "símbolo",
+      "color"
+    ],
+    "obras_relacionadas": [
+      5,
+      17,
+      20,
+      24
+    ],
+    "lectura_curatorial": "La integración del animal y el paisaje convierte la figura del oso en un eje entre fauna y territorio. La composición frontal y casi simétrica refuerza su carácter icónico y contemplativo.",
+    "elementos_visuales": [
+      "oso",
+      "montaña",
+      "agua",
+      "árboles",
+      "animales",
+      "azul",
+      "violeta"
+    ],
+    "estado_curatorial": "revisado"
+  }
+]
