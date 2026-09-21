@@ -243,8 +243,9 @@ function renderGallery(list = works) {
       data-index="${index}"
     >
 
-      <button
+      <a
         class="art-image"
+        href="obras/obra-${String(work.id).padStart(2, "0")}.html"
         aria-label="Ver ${work.title}"
       >
 
@@ -262,7 +263,7 @@ function renderGallery(list = works) {
           Ver obra
         </span>
 
-      </button>
+      </a>
 
       <div class="art-info">
 
