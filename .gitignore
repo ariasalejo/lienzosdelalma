@@ -1,0 +1,15 @@
+
+# Backups locales de trabajo
+*.bak
+*.bak_*
+*.before-editorial
+
+# Python
+__pycache__/
+*.pyc
+
+# Material temporal de curaduría
+lienzos_curaduria_tmp/
+
+# Material de contacto / presentación local
+lienzos_contacto/

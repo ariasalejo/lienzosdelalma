@@ -811,3 +811,460 @@ img{
     transition:none !important;
   }
 }
+
+/* ============================================================
+   PALABRAS CLAVE · acabado editorial
+   ============================================================ */
+
+.obra-keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.obra-keywords-list li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: rgba(242, 238, 230, 0.82);
+  font-family: inherit;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+
+.obra-keywords-list li:not(:last-child)::after {
+  content: "·";
+  display: inline-block;
+  margin-left: 0.9rem;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .obra-keywords-list {
+    gap: 0.25rem 0.65rem;
+  }
+
+  .obra-keywords-list li {
+    white-space: normal;
+    line-height: 1.65;
+  }
+
+  .obra-keywords-list li:not(:last-child)::after {
+    margin-left: 0.65rem;
+  }
+}
+
+/* ============================================================
+   LIENZOS DEL ALMA · PRESENTACIÓN DE EXPOSICIÓN
+   Museo digital / libro de arte / exposición contemporánea
+   ============================================================ */
+
+:root {
+  --museum-bg: #080808;
+  --museum-paper: #f2eee6;
+  --museum-muted: rgba(242,238,230,.58);
+  --museum-line: rgba(242,238,230,.11);
+  --museum-gold: #c9a96e;
+}
+
+body {
+  background:
+    radial-gradient(
+      ellipse 70% 45% at 50% 0%,
+      rgba(201,169,110,.045),
+      transparent 70%
+    ),
+    var(--museum-bg);
+}
+
+.obra-page {
+  overflow-x: hidden;
+}
+
+/* ------------------------------------------------------------
+   CABECERA
+   ------------------------------------------------------------ */
+
+.obra-intro {
+  position: relative;
+  width: min(1050px, 100%);
+  min-height: auto;
+  margin: 0 auto clamp(34px, 5vw, 58px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: clamp(4rem, 9vh, 7rem);
+  padding-bottom: clamp(2.5rem, 5vh, 4.5rem);
+}
+
+.obra-intro::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8%;
+  width: min(35vw, 420px);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--museum-gold),
+    transparent
+  );
+  opacity: .55;
+  pointer-events: none;
+}
+
+.obra-index {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 1rem;
+  color: var(--museum-gold);
+  font-family: var(--sans);
+  font-size: .68rem;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+}
+
+.obra-title {
+  position: relative;
+  max-width: 1050px;
+  margin: 0;
+  color: var(--museum-paper);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: .88;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+.obra-artist {
+  margin-top: 1.2rem;
+  color: var(--museum-muted);
+  font-family: var(--sans);
+  font-size: .72rem;
+  letter-spacing: .25em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------
+   SALA DE EXPOSICIÓN
+   ------------------------------------------------------------ */
+
+.obra-stage {
+  position: relative;
+  width: 100%;
+  min-height: min(82vh, 900px);
+  padding: clamp(2.5rem, 6vw, 6rem) 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.obra-stage::before {
+  content: "";
+  position: absolute;
+  width: min(75vw, 900px);
+  height: min(75vw, 900px);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,.055) 0%,
+    rgba(201,169,110,.018) 28%,
+    transparent 70%
+  );
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.obra-stage::after {
+  content: "LIENZOS DEL ALMA";
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  color: rgba(242,238,230,.16);
+  font-family: var(--sans);
+  font-size: .55rem;
+  letter-spacing: .35em;
+  writing-mode: vertical-rl;
+  pointer-events: none;
+}
+
+.obra-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(91vw, 1280px);
+  max-height: 82vh;
+  object-fit: contain;
+  box-shadow:
+    0 45px 100px rgba(0,0,0,.52),
+    0 12px 35px rgba(0,0,0,.30),
+    0 0 0 1px rgba(255,255,255,.045);
+  transition:
+    transform 700ms cubic-bezier(.16,1,.3,1),
+    box-shadow 700ms ease;
+}
+
+.obra-image:hover {
+  transform: scale(1.012);
+  box-shadow:
+    0 55px 120px rgba(0,0,0,.62),
+    0 18px 45px rgba(0,0,0,.35),
+    0 0 0 1px rgba(201,169,110,.16);
+}
+
+/* ------------------------------------------------------------
+   CONTENIDO CURATORIAL
+   ------------------------------------------------------------ */
+
+.obra-editorial,
+.obra-visual-description,
+.obra-reading,
+.obra-keywords,
+.obra-related {
+  position: relative;
+}
+
+.obra-editorial {
+  margin-top: clamp(7rem, 15vw, 13rem);
+  padding-top: 2rem;
+}
+
+.obra-editorial::before,
+.obra-visual-description::before,
+.obra-reading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 1px;
+  background: var(--museum-gold);
+  opacity: .7;
+}
+
+.editorial-label {
+  margin-bottom: 1.5rem;
+  color: var(--museum-gold);
+  font-family: var(--sans);
+  font-size: .64rem;
+  font-weight: 500;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+}
+
+.obra-editorial p:not(.editorial-label),
+.obra-visual-description p:not(.editorial-label),
+.obra-reading p:not(.editorial-label) {
+  max-width: 790px;
+  color: rgba(242,238,230,.88);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  line-height: 1.65;
+}
+
+.obra-reading {
+  margin-top: clamp(7rem, 15vw, 13rem);
+  padding-top: 2rem;
+}
+
+.obra-reading p:not(.editorial-label) {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.55;
+  color: rgba(242,238,230,.94);
+}
+
+/* ------------------------------------------------------------
+   PALABRAS CLAVE
+   ------------------------------------------------------------ */
+
+.obra-keywords {
+  margin-top: clamp(6rem, 12vw, 10rem);
+  padding-top: 2rem;
+  border-top: 1px solid var(--museum-line);
+}
+
+.obra-keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.obra-keywords-list li {
+  color: rgba(242,238,230,.72);
+  font-family: var(--sans);
+  font-size: .78rem;
+  letter-spacing: .08em;
+  line-height: 1.7;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.obra-keywords-list li:not(:last-child)::after {
+  content: "·";
+  margin-left: 1rem;
+  color: var(--museum-gold);
+}
+
+/* ------------------------------------------------------------
+   OBRAS RELACIONADAS
+   ------------------------------------------------------------ */
+
+.obra-related {
+  margin-top: clamp(7rem, 14vw, 12rem);
+  padding-top: 2rem;
+  border-top: 1px solid var(--museum-line);
+}
+
+.related-list {
+  display: grid;
+  gap: 0;
+}
+
+.obra-related-link {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid rgba(242,238,230,.07);
+  color: var(--museum-paper);
+  text-decoration: none;
+  transition:
+    padding-left 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease;
+}
+
+.obra-related-link:hover {
+  padding-left: .8rem;
+  color: var(--museum-gold);
+  border-color: rgba(201,169,110,.35);
+}
+
+.obra-related-number {
+  color: var(--museum-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.1rem;
+}
+
+.obra-related-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+}
+
+/* ------------------------------------------------------------
+   NAVEGACIÓN
+   ------------------------------------------------------------ */
+
+.obra-navigation {
+  margin-top: clamp(6rem, 12vw, 10rem);
+  padding: 2rem 0 5rem;
+  border-top: 1px solid var(--museum-line);
+}
+
+.obra-navigation a {
+  transition:
+    color 220ms ease,
+    opacity 220ms ease;
+}
+
+.obra-navigation a:hover {
+  color: var(--museum-gold);
+}
+
+/* ------------------------------------------------------------
+   ACCESIBILIDAD / MÓVIL
+   ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .obra-image,
+  .obra-related-link,
+  .obra-navigation a {
+    transition: none;
+  }
+
+  .obra-image:hover,
+  .obra-related-link:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .obra-intro {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .obra-intro::before {
+    width: 45vw;
+  }
+
+  .obra-index {
+    margin-bottom: 1rem;
+  }
+
+  .obra-title {
+    font-size: clamp(3rem, 14vw, 5rem);
+    line-height: .88;
+  }
+
+  .obra-artist {
+    margin-top: 1.2rem;
+    font-size: .62rem;
+    line-height: 1.8;
+  }
+
+  .obra-stage {
+    min-height: 70vh;
+    padding: 2rem .5rem;
+  }
+
+  .obra-image {
+    max-width: 94vw;
+    max-height: 70vh;
+  }
+
+  .obra-stage::after {
+    display: none;
+  }
+
+  .obra-editorial p:not(.editorial-label),
+  .obra-visual-description p:not(.editorial-label),
+  .obra-reading p:not(.editorial-label) {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+
+  .obra-reading p:not(.editorial-label) {
+    font-size: 1.45rem;
+  }
+
+  .obra-keywords-list li {
+    white-space: normal;
+  }
+
+  .obra-keywords-list li:not(:last-child)::after {
+    margin-left: .7rem;
+  }
+
+  .obra-related-link {
+    grid-template-columns: 2.5rem minmax(0,1fr);
+  }
+}

@@ -124,6 +124,10 @@ for index, work in enumerate(works):
     visual_description = escape(work["descripcion_visual"])
     alt_text = escape(work["alt_text"], quote=True)
     keywords = work["palabras_clave"]
+    keywords_html = "".join(
+        f'<li>{escape(str(keyword))}</li>'
+        for keyword in keywords
+    )
     related_ids = work["obras_relacionadas"]
     related_links = []
     works_by_id = {item["id"]: item for item in works}
@@ -359,12 +363,9 @@ for index, work in enumerate(works):
       Palabras clave
     </p>
 
-    <div class="keyword-list">
-      {"".join(
-          f'<span>{escape(keyword)}</span>'
-          for keyword in keywords
-      )}
-    </div>
+    <ul class="obra-keywords-list">
+      {keywords_html}
+    </ul>
 
   </section>
 

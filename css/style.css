@@ -1262,3 +1262,392 @@ footer > div:not(.footer-brand) {
   }
 
 }
+
+/* ============================================================
+   LIENZOS DEL ALMA · COMITÉ
+   SISTEMA EDITORIAL DE TARJETAS
+   ============================================================ */
+
+.art-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.art-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.art-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition:
+    transform 900ms cubic-bezier(.2,.65,.2,1);
+}
+
+/* La obra se mueve ligeramente; sus colores NO se modifican. */
+.art-card:hover .art-image img {
+  transform: scale(1.018);
+}
+
+.art-info {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "number category action"
+    "title title action"
+    "description description action";
+  column-gap: 1.2rem;
+  row-gap: .45rem;
+  padding: 1.35rem 0 2.8rem;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.art-number {
+  grid-area: number;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.05rem;
+  letter-spacing: .08em;
+  opacity: .72;
+  line-height: 1;
+}
+
+.art-category {
+  grid-area: category;
+  align-self: center;
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  opacity: .62;
+}
+
+.art-info h3,
+.art-title {
+  grid-area: title;
+  margin: .2rem 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.7rem, 2.3vw, 2.35rem);
+  font-weight: 500;
+  line-height: .98;
+}
+
+.art-info p:not(.art-category) {
+  grid-area: description;
+  max-width: 42rem;
+  margin: .35rem 0 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .9rem;
+  line-height: 1.65;
+  opacity: .66;
+}
+
+.view {
+  grid-area: action;
+  align-self: end;
+  justify-self: end;
+  white-space: nowrap;
+  padding: .65rem 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.view::after {
+  content: " →";
+}
+
+.art-card:hover .view {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.art-card:focus-within .view {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .art-info {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "number category"
+      "title title"
+      "description description"
+      "action action";
+  }
+
+  .view {
+    justify-self: start;
+    margin-top: .5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .art-image img,
+  .view {
+    transition: none;
+  }
+
+  .art-card:hover .art-image img {
+    transform: none;
+  }
+
+  .art-card:hover .view {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   MANIFIESTO · EL ARTE COMO MEMORIA
+   ============================================================ */
+
+.memory-section {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-block: clamp(7rem, 14vw, 13rem);
+}
+
+.memory-section .section-kicker {
+  margin-bottom: 2rem;
+}
+
+.memory-section h2 {
+  max-width: 850px;
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 400;
+  line-height: .82;
+  letter-spacing: -.035em;
+}
+
+.memory-copy {
+  max-width: 600px;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  margin-left: auto;
+}
+
+.memory-copy p {
+  margin: 0 0 1.5rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  opacity: .68;
+}
+
+/* ============================================================
+   FILTROS · ÍNDICE CURATORIAL
+   ============================================================ */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-block: 2.5rem 4rem;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.filters button,
+.filter-button,
+.filters a {
+  position: relative;
+  padding: .85rem 1.1rem .95rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .55;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.filter-button:hover,
+.filters a:hover {
+  opacity: 1;
+}
+
+.filters button.active,
+.filter-button.active,
+.filters a.active {
+  opacity: 1;
+}
+
+.filters button.active::after,
+.filter-button.active::after,
+.filters a.active::after {
+  content: "";
+  position: absolute;
+  right: 1.1rem;
+  bottom: -1px;
+  left: 1.1rem;
+  height: 1px;
+  background: currentColor;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filters button,
+  .filter-button,
+  .filters a {
+    flex: 0 0 auto;
+  }
+}
+
+/* ============================================================
+   NAV · EDITORIAL
+   ============================================================ */
+
+.site-header {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.35rem clamp(1.25rem, 4vw, 4rem);
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.1rem;
+}
+
+.site-brand-name {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.8rem);
+}
+
+.site-nav a {
+  position: relative;
+  color: inherit;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: .62;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .site-nav a:not(.language-switcher) {
+    display: none;
+  }
+}
+
+/* ============================================================
+   ACCESIBILIDAD · WCAG 2.2
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid CanvasText;
+  }
+}
+
+/* ============================================================
+   LIENZOS DEL ALMA · HERO EDITORIAL · COMITÉ
+   ============================================================ */
+
+.hero-text {
+  max-width: 38rem;
+  margin-inline: auto;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+
+.hero-context {
+  max-width: 38rem;
+  margin: 1.5rem auto 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: .9rem;
+  line-height: 1.75;
+  opacity: .62;
+}
+
+@media (max-width: 700px) {
+  .hero-text {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+  .hero-context {
+    font-size: .86rem;
+    line-height: 1.7;
+  }
+}
