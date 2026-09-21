@@ -1,63 +1,398 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lienzos del Alma - Bernardo León Mejía Rivera</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Lienzos del Alma | Bernardo León Mejía Rivera
+  </title>
+
+  <meta
+    name="description"
+    content="Galería digital dedicada a la obra artística de Bernardo León Mejía Rivera, desde Copacabana, Antioquia, Colombia."
+  >
+
+  <meta
+    name="author"
+    content="Lienzos del Alma"
+  >
+
+  <meta
+    name="theme-color"
+    content="#17120e"
+  >
+
+  <meta
+    property="og:title"
+    content="Lienzos del Alma — Bernardo León Mejía Rivera"
+  >
+
+  <meta
+    property="og:description"
+    content="Una galería digital de arte desde Copacabana, Antioquia, Colombia."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:locale"
+    content="es_CO"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": "Lienzos del Alma",
+    "creator": {
+      "@type": "Person",
+      "name": "Bernardo León Mejía Rivera"
+    },
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Copacabana, Antioquia, Colombia"
+    },
+    "artform": "Visual Art"
+  }
+  </script>
 </head>
+
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="title">Lienzos del Alma</h1>
-            <p class="subtitle">Bernardo León Mejía Rivera</p>
-            <p class="location">Copacabana, Antioquia - Colombia</p>
-            <a href="galeria.html" class="cta-button">Explorar Galería</a>
-        </div>
-    </header>
-    <section class="intro">
-        <div class="container">
-            <h2>El Arte que Nace del Corazón</h2>
-            <p>Cada obra es un testimonio vivo de fe, esperanza y amor por la vida. El maestro Bernardo León Mejía Rivera nos invita a contemplar el mundo a través de sus ojos llenos de sensibilidad y espiritualidad.</p>
-        </div>
-    </section>
-    <section class="preview">
-        <div class="container">
-            <h2>Obras Destacadas</h2>
-            <div class="gallery-grid">
-                
-                <div class="artwork-card">
-                    <img src="https://i.ibb.co/b5rCVWVh/image.jpg" onerror="this.src='https://i.ibb.co/b5rCVWVh/image.png'" alt="Legado de Color">
-                    <h3>Legado de Color</h3>
-                    <p>Una obra que resume la pasión de toda una vida dedicada a embellecer el mundo a través del arte.</p>
-                </div>
-                <div class="artwork-card">
-                    <img src="https://i.ibb.co/RkkRjtBy/image.jpg" onerror="this.src='https://i.ibb.co/RkkRjtBy/image.png'" alt="Crepúsculo en el Valle">
-                    <h3>Crepúsculo en el Valle</h3>
-                    <p>Los últimos rayos del día pintan el cielo con una paleta de ocres y violetas, firmada por la mano del maestro.</p>
-                </div>
-                <div class="artwork-card">
-                    <img src="https://i.ibb.co/4RCn5BjL/image.jpg" onerror="this.src='https://i.ibb.co/4RCn5BjL/image.png'" alt="El Abrazo Divino">
-                    <h3>El Abrazo Divino</h3>
-                    <p>La protección celestial representada en tonos cálidos que envuelven al espectador en un manto de paz.</p>
-                </div>
-                <div class="artwork-card">
-                    <img src="https://i.ibb.co/7xscwr1k/image.jpg" onerror="this.src='https://i.ibb.co/7xscwr1k/image.png'" alt="Armonía Rural">
-                    <h3>Armonía Rural</h3>
-                    <p>La cotidianidad del campo elevada a la categoría de arte, celebrando las raíces de nuestra identidad.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="galeria.html" class="view-all">Ver Galería Completa →</a>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Lienzos del Alma - Homenaje a Bernardo León Mejía Rivera</p>
-            <p>Copacabana, Antioquia, Colombia</p>
-        </div>
-    </footer>
+
+<header class="site-header">
+
+  <a class="brand" href="#inicio">
+    <span class="brand-mark">L</span>
+
+    <span>
+      <strong>Lienzos del Alma</strong>
+      <small>Bernardo León Mejía Rivera</small>
+    </span>
+  </a>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#galeria">Galería</a>
+    <a href="#artista">El Artista</a>
+  </nav>
+
+  <button
+    id="language"
+    class="language"
+    type="button"
+    aria-label="Cambiar idioma"
+  >
+    EN
+  </button>
+
+</header>
+
+
+<main>
+
+<section id="inicio" class="hero">
+
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      COPACABANA · ANTIOQUIA · COLOMBIA
+    </p>
+
+    <h1>
+      Lienzos<br>
+      <em>del Alma</em>
+    </h1>
+
+    <p
+      class="hero-text"
+      data-es="Una colección de obras nacidas de la sensibilidad, la fe, la naturaleza y el amor por el arte."
+      data-en="A collection of works born from sensitivity, faith, nature and a love for art."
+    >
+      Una colección de obras nacidas de la sensibilidad,
+      la fe, la naturaleza y el amor por el arte.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="button primary" href="#galeria">
+        Explorar la colección
+      </a>
+
+      <a class="button ghost" href="#artista">
+        Conocer al artista
+      </a>
+
+    </div>
+
+    <div class="hero-meta">
+
+      <div>
+        <strong>26</strong>
+        <span>obras</span>
+      </div>
+
+      <div>
+        <strong>∞</strong>
+        <span>historias</span>
+      </div>
+
+      <div>
+        <strong>CO</strong>
+        <span>Colombia</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="hero-art">
+
+    <div class="hero-frame">
+
+      <img
+        src="https://i.ibb.co/rRJ3fGND/IMG-20260816-WA0008.jpg"
+        alt="Obra artística de Bernardo León Mejía Rivera"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="intro">
+
+  <p class="eyebrow">EL ARTE COMO MEMORIA</p>
+
+  <h2>
+    Cada obra guarda<br>
+    <em>una historia.</em>
+  </h2>
+
+  <p>
+    Lienzos del Alma nace como un espacio digital para conservar,
+    contemplar y compartir la obra de Bernardo León Mejía Rivera.
+    Desde Copacabana, Antioquia, estas obras encuentran una nueva
+    ventana hacia el mundo.
+  </p>
+
+</section>
+
+
+<section id="galeria" class="gallery-section">
+
+  <div class="section-heading">
+
+    <div>
+      <p class="eyebrow">LA COLECCIÓN</p>
+
+      <h2>
+        Obras
+        <em>destacadas</em>
+      </h2>
+    </div>
+
+    <p>
+      Explora las 26 obras de la colección.
+    </p>
+
+  </div>
+
+
+  <div class="filters">
+
+    <button class="filter active" data-filter="all">
+      Todas
+    </button>
+
+    <button class="filter" data-filter="religioso">
+      Religioso
+    </button>
+
+    <button class="filter" data-filter="retratos">
+      Retratos
+    </button>
+
+    <button class="filter" data-filter="naturaleza">
+      Naturaleza
+    </button>
+
+    <button class="filter" data-filter="paisajes">
+      Paisajes
+    </button>
+
+  </div>
+
+
+  <div id="gallery" class="gallery"></div>
+
+</section>
+
+
+<section id="artista" class="artist">
+
+  <div class="artist-image">
+
+    <div class="artist-card">
+
+      <span>BERNARDO</span>
+
+      <strong>
+        LEÓN<br>
+        MEJÍA<br>
+        RIVERA
+      </strong>
+
+      <small>
+        COPACABANA · ANTIOQUIA
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="artist-content">
+
+    <p class="eyebrow">
+      EL ARTISTA
+    </p>
+
+    <h2>
+      El maestro de<br>
+      <em>Copacabana</em>
+    </h2>
+
+    <p>
+      Bernardo León Mejía Rivera ha dedicado su expresión
+      artística a explorar diferentes formas, colores y temas.
+      Su colección reúne escenas religiosas, retratos,
+      animales, naturaleza y paisajes.
+    </p>
+
+    <p>
+      Su trabajo combina sensibilidad, observación y dedicación,
+      dando lugar a imágenes que invitan a detenerse y mirar.
+    </p>
+
+    <div class="techniques">
+
+      <span>Pasteles al óleo</span>
+      <span>Pasteles secos</span>
+      <span>Lápices de color</span>
+      <span>Dibujo</span>
+      <span>Pintura</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="quote">
+
+  <div class="quote-line"></div>
+
+  <blockquote>
+    “El arte también es una forma
+    de conservar aquello que amamos.”
+  </blockquote>
+
+  <p>
+    LIENZOS DEL ALMA · COPACABANA, COLOMBIA
+  </p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-brand">
+    <strong>Lienzos del Alma</strong>
+    <span>
+      Bernardo León Mejía Rivera
+    </span>
+  </div>
+
+  <div>
+    Copacabana · Antioquia · Colombia
+  </div>
+
+  <div>
+    © 2026 Lienzos del Alma
+  </div>
+
+</footer>
+
+
+<div
+  id="lightbox"
+  class="lightbox"
+  aria-hidden="true"
+>
+
+  <button
+    id="closeLightbox"
+    class="close"
+    aria-label="Cerrar"
+  >
+    ×
+  </button>
+
+  <button
+    id="previous"
+    class="lightbox-nav previous"
+    aria-label="Obra anterior"
+  >
+    ‹
+  </button>
+
+  <figure>
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt=""
+    >
+
+    <figcaption>
+
+      <strong id="lightboxTitle"></strong>
+
+      <span id="lightboxDescription"></span>
+
+    </figcaption>
+
+  </figure>
+
+  <button
+    id="next"
+    class="lightbox-nav next"
+    aria-label="Obra siguiente"
+  >
+    ›
+  </button>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
 </body>
 </html>
