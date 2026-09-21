@@ -20,9 +20,9 @@ pattern = re.compile(
 
 matches = pattern.findall(app)
 
-if len(matches) != 26:
+if not matches:
     raise SystemExit(
-        f"ERROR: se encontraron {len(matches)} obras; se esperaban 26."
+        f"ERROR: no se encontraron obras en js/app.js."
     )
 
 works = [
@@ -38,11 +38,15 @@ works = [
 
 works.sort(key=lambda x: x["id"])
 
-for expected, work in enumerate(works, 1):
-    if work["id"] != expected:
-        raise SystemExit(
-            f"ERROR: falta la obra {expected:02d}."
-        )
+# Los IDs identifican obras históricas y no tienen que ser consecutivos.
+# La obra 08 fue retirada del catálogo por ser una duplicación visual de la 05.
+ids = [work["id"] for work in works]
+
+if len(ids) != len(set(ids)):
+    raise SystemExit("ERROR: existen IDs de obra duplicados.")
+
+if 8 in ids:
+    raise SystemExit("ERROR: la obra 08 todavía está presente en js/app.js.")
 
 labels = {
     "religioso": "Religioso",
@@ -69,14 +73,14 @@ if not INVENTARIO_PATH.exists():
 with INVENTARIO_PATH.open(encoding="utf-8") as f:
     inventario = json.load(f)
 
-if len(inventario) != 26:
+if len(inventario) != len(matches):
     raise SystemExit(
-        f"❌ Inventario incorrecto: se esperaban 26 obras, hay {len(inventario)}."
+        f"❌ Inventario incorrecto: hay {len(inventario)} entradas para {len(matches)} obras."
     )
 
 inventario_por_id = {item["id"]: item for item in inventario}
 
-if set(inventario_por_id) != set(range(1, 27)):
+if set(inventario_por_id) != {work["id"] for work in works}:
     raise SystemExit(
         "❌ El inventario debe contener exactamente los IDs 1–26."
     )
@@ -241,7 +245,7 @@ for index, work in enumerate(works):
   <div class="obra-intro">
 
     <div class="obra-index">
-      {number} / 26
+      {number} / {len(works)}
     </div>
 
     <p class="obra-kicker">

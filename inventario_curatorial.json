@@ -142,7 +142,6 @@
       "expresión"
     ],
     "obras_relacionadas": [
-      8,
       9,
       14,
       26
@@ -226,40 +225,6 @@
     "estado_curatorial": "revisado"
   },
   {
-    "id": 8,
-    "title": "Ave entre ramas",
-    "category": "naturaleza",
-    "image": "https://i.ibb.co/v6jmvgBR/IMG-20260816-WA0013.jpg",
-    "description_actual": "Estudio de aves y vegetación.",
-    "descripcion_visual": "Composición horizontal con pequeñas aves de tonos azules, blancos y anaranjados entre ramas y vegetación.",
-    "lectura": "",
-    "alt_text": "Dos pequeñas aves de tonos azules, blancos y anaranjados entre ramas y vegetación.",
-    "palabras_clave": [
-      "aves",
-      "naturaleza",
-      "vegetación",
-      "color",
-      "fauna"
-    ],
-    "obras_relacionadas": [
-      9,
-      10,
-      14,
-      15,
-      20
-    ],
-    "lectura_curatorial": "Las aves funcionan como puntos de atención dentro de una estructura vegetal. El diálogo entre sus colores y el follaje da a la escena una sensación de movimiento y vida.",
-    "elementos_visuales": [
-      "aves",
-      "ramas",
-      "vegetación",
-      "azul",
-      "blanco",
-      "naranja"
-    ],
-    "estado_curatorial": "revisado"
-  },
-  {
     "id": 9,
     "title": "Aves de colores",
     "category": "naturaleza",
@@ -276,7 +241,6 @@
       "fauna"
     ],
     "obras_relacionadas": [
-      8,
       10,
       14,
       20
@@ -309,7 +273,6 @@
       "intimidad"
     ],
     "obras_relacionadas": [
-      8,
       9,
       14
     ],
@@ -439,7 +402,6 @@
       "movimiento"
     ],
     "obras_relacionadas": [
-      8,
       9,
       10,
       20
@@ -537,7 +499,6 @@
       "movimiento"
     ],
     "obras_relacionadas": [
-      8,
       14,
       20,
       26
@@ -629,7 +590,6 @@
       "color"
     ],
     "obras_relacionadas": [
-      8,
       9,
       14,
       17

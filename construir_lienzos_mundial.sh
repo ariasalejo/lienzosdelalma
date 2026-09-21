@@ -469,13 +469,6 @@ const works = [
     description: "Paisaje nocturno construido alrededor del agua y la luz."
   },
 
-  {
-    id: 8,
-    title: "Ave entre ramas",
-    category: "naturaleza",
-    image: "https://i.ibb.co/v6jmvgBR/IMG-20260816-WA0013.jpg",
-    description: "Estudio de aves y vegetación."
-  },
 
   {
     id: 9,
