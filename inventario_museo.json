@@ -1,0 +1,176 @@
+{
+  "coleccion": "Lienzos del Alma",
+  "artista": "Bernardo León Mejía Rivera",
+  "lugar": "Copacabana · Antioquia · Colombia",
+  "total": 24,
+  "obras": [
+    {
+      "id": "01",
+      "title": "Obra 01",
+      "category": "Colección",
+      "image": "https://i.ibb.co/rRJ3fGND/IMG-20260816-WA0008.jpg",
+      "description": ""
+    },
+    {
+      "id": "02",
+      "title": "Obra 02",
+      "category": "Colección",
+      "image": "https://i.ibb.co/Ng3Z6S9K/IMG-20260816-WA0006.jpg",
+      "description": ""
+    },
+    {
+      "id": "03",
+      "title": "Obra 03",
+      "category": "Colección",
+      "image": "https://i.ibb.co/1NfhvhG/IMG-20260816-WA0009.jpg",
+      "description": ""
+    },
+    {
+      "id": "04",
+      "title": "Obra 04",
+      "category": "Colección",
+      "image": "https://i.ibb.co/93mzGN93/IMG-20260816-WA0010.jpg",
+      "description": ""
+    },
+    {
+      "id": "05",
+      "title": "Obra 05",
+      "category": "Colección",
+      "image": "https://i.ibb.co/LdmHB3WW/IMG-20260816-WA0011.jpg",
+      "description": ""
+    },
+    {
+      "id": "06",
+      "title": "Obra 06",
+      "category": "Colección",
+      "image": "https://i.ibb.co/gMf2frdM/IMG-20260816-WA0012.jpg",
+      "description": ""
+    },
+    {
+      "id": "07",
+      "title": "Obra 07",
+      "category": "Colección",
+      "image": "https://i.ibb.co/h19PhnHZ/IMG-20260816-WA0005.jpg",
+      "description": ""
+    },
+    {
+      "id": "09",
+      "title": "Obra 09",
+      "category": "Colección",
+      "image": "https://i.ibb.co/chVpBYzQ/IMG-20260816-WA0015.jpg",
+      "description": ""
+    },
+    {
+      "id": "10",
+      "title": "Obra 10",
+      "category": "Colección",
+      "image": "https://i.ibb.co/zHFcFYrL/IMG-20260816-WA0017.jpg",
+      "description": ""
+    },
+    {
+      "id": "11",
+      "title": "Obra 11",
+      "category": "Colección",
+      "image": "https://i.ibb.co/RtRY47P/IMG-20260816-WA0007.jpg",
+      "description": ""
+    },
+    {
+      "id": "12",
+      "title": "Obra 12",
+      "category": "Colección",
+      "image": "https://i.ibb.co/VpzpjYpy/IMG-20260816-WA0018.jpg",
+      "description": ""
+    },
+    {
+      "id": "13",
+      "title": "Obra 13",
+      "category": "Colección",
+      "image": "https://i.ibb.co/CKX7KF3N/IMG-20260816-WA0016.jpg",
+      "description": ""
+    },
+    {
+      "id": "14",
+      "title": "Obra 14",
+      "category": "Colección",
+      "image": "https://i.ibb.co/JWzkJbcP/IMG-20260816-WA0019.jpg",
+      "description": ""
+    },
+    {
+      "id": "15",
+      "title": "Obra 15",
+      "category": "Colección",
+      "image": "https://i.ibb.co/HpP1FvhD/IMG-20260816-WA0021.jpg",
+      "description": ""
+    },
+    {
+      "id": "16",
+      "title": "Obra 16",
+      "category": "Colección",
+      "image": "https://i.ibb.co/tTQzDZw4/IMG-20260816-WA0022.jpg",
+      "description": ""
+    },
+    {
+      "id": "17",
+      "title": "Obra 17",
+      "category": "Colección",
+      "image": "https://i.ibb.co/SXJf4NbB/IMG-20260816-WA0020.jpg",
+      "description": ""
+    },
+    {
+      "id": "18",
+      "title": "Obra 18",
+      "category": "Colección",
+      "image": "https://i.ibb.co/QvbkQ9dW/IMG-20260819-WA0016.jpg",
+      "description": ""
+    },
+    {
+      "id": "19",
+      "title": "Obra 19",
+      "category": "Colección",
+      "image": "https://i.ibb.co/XrXSzVK1/IMG-20260820-WA0014.jpg",
+      "description": ""
+    },
+    {
+      "id": "20",
+      "title": "Obra 20",
+      "category": "Colección",
+      "image": "https://i.ibb.co/h1fbX5bK/IMG-20260824-WA0001.jpg",
+      "description": ""
+    },
+    {
+      "id": "21",
+      "title": "Obra 21",
+      "category": "Colección",
+      "image": "https://i.ibb.co/dw9mW6m2/IMG-20260823-WA0006.jpg",
+      "description": ""
+    },
+    {
+      "id": "22",
+      "title": "Obra 22",
+      "category": "Colección",
+      "image": "https://i.ibb.co/HL5vWGHh/IMG-20260825-WA0020.jpg",
+      "description": ""
+    },
+    {
+      "id": "23",
+      "title": "Obra 23",
+      "category": "Colección",
+      "image": "https://i.ibb.co/GQG4bgVD/IMG-20260826-WA0004.jpg",
+      "description": ""
+    },
+    {
+      "id": "24",
+      "title": "Obra 24",
+      "category": "Colección",
+      "image": "https://i.ibb.co/q33TJhW5/IMG-20260829-WA0004.jpg",
+      "description": ""
+    },
+    {
+      "id": "25",
+      "title": "Obra 25",
+      "category": "Colección",
+      "image": "https://i.ibb.co/GQV8DxDw/IMG-20260916-WA0003.jpg",
+      "description": ""
+    }
+  ]
+}

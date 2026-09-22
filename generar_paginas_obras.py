@@ -6,6 +6,9 @@ import json
 ROOT = Path(__file__).parent
 APP = ROOT / "js" / "app.js"
 OUT = ROOT / "obras"
+INVENTARIO_PATH = ROOT / "inventario_curatorial.json"
+
+OUT.mkdir(exist_ok=True)
 
 app = APP.read_text(encoding="utf-8")
 
@@ -22,7 +25,7 @@ matches = pattern.findall(app)
 
 if not matches:
     raise SystemExit(
-        f"ERROR: no se encontraron obras en js/app.js."
+        "ERROR: no se encontraron obras en js/app.js"
     )
 
 works = [
@@ -38,54 +41,29 @@ works = [
 
 works.sort(key=lambda x: x["id"])
 
-# Los IDs identifican obras históricas y no tienen que ser consecutivos.
-# La obra 08 fue retirada del catálogo por ser una duplicación visual de la 05.
-ids = [work["id"] for work in works]
+ids = [w["id"] for w in works]
 
 if len(ids) != len(set(ids)):
-    raise SystemExit("ERROR: existen IDs de obra duplicados.")
+    raise SystemExit("ERROR: existen IDs duplicados.")
 
 if 8 in ids:
-    raise SystemExit("ERROR: la obra 08 todavía está presente en js/app.js.")
-
-labels = {
-    "religioso": "Religioso",
-    "retratos": "Retratos",
-    "naturaleza": "Naturaleza",
-    "paisajes": "Paisajes",
-}
-
-
-OUT.mkdir(exist_ok=True)
-
-
-# INVENTARIO_CURATORIAL_INTEGRADO
-# ------------------------------------------------------------
-# Enriquece cada obra con la información curatorial validada.
-# El inventario es la fuente de contenido editorial.
-# ------------------------------------------------------------
-
-INVENTARIO_PATH = ROOT / "inventario_curatorial.json"
+    raise SystemExit(
+        "ERROR: la obra 08 todavía aparece en js/app.js."
+    )
 
 if not INVENTARIO_PATH.exists():
-    raise SystemExit("❌ No existe inventario_curatorial.json")
+    raise SystemExit(
+        "ERROR: falta inventario_curatorial.json"
+    )
 
 with INVENTARIO_PATH.open(encoding="utf-8") as f:
     inventario = json.load(f)
 
-if len(inventario) != len(matches):
-    raise SystemExit(
-        f"❌ Inventario incorrecto: hay {len(inventario)} entradas para {len(matches)} obras."
-    )
+inventario_por_id = {
+    item["id"]: item for item in inventario
+}
 
-inventario_por_id = {item["id"]: item for item in inventario}
-
-if set(inventario_por_id) != {work["id"] for work in works}:
-    raise SystemExit(
-        "❌ El inventario debe contener exactamente los IDs 1–26."
-    )
-
-campos_curatoriales = {
+campos = {
     "descripcion_visual",
     "lectura_curatorial",
     "elementos_visuales",
@@ -96,12 +74,21 @@ campos_curatoriales = {
 }
 
 for work in works:
-    item = inventario_por_id[work["id"]]
 
-    faltantes = campos_curatoriales - set(item)
+    item = inventario_por_id.get(work["id"])
+
+    if not item:
+        raise SystemExit(
+            f"ERROR: falta información curatorial para la obra "
+            f"{work['id']:02d}"
+        )
+
+    faltantes = campos - set(item)
+
     if faltantes:
         raise SystemExit(
-            f"❌ Obra {work['id']} incompleta: {sorted(faltantes)}"
+            f"ERROR: obra {work['id']:02d} incompleta: "
+            f"{sorted(faltantes)}"
         )
 
     work.update({
@@ -114,67 +101,169 @@ for work in works:
         "estado_curatorial": item["estado_curatorial"],
     })
 
+
+labels = {
+    "religioso": "Religioso",
+    "retratos": "Retratos",
+    "naturaleza": "Naturaleza",
+    "paisajes": "Paisajes",
+}
+
+
+category_classes = {
+    "religioso": "religioso",
+    "retratos": "retratos",
+    "naturaleza": "naturaleza",
+    "paisajes": "paisajes",
+}
+
+
+works_by_id = {
+    work["id"]: work
+    for work in works
+}
+
+
+def esc(value, quote=False):
+    return escape(str(value), quote=quote)
+
+
+def category_label(value):
+    return labels.get(
+        value.lower(),
+        value.title()
+    )
+
+
 for index, work in enumerate(works):
 
     number = f"{work['id']:02d}"
+    total = len(works)
 
-    title = escape(work["title"])
-    category = escape(
-        labels.get(work["category"], work["category"].title())
+    title = esc(work["title"])
+    category = esc(
+        category_label(work["category"])
     )
-    image = escape(work["image"], quote=True)
-    description = escape(work["description"])
-    reading = escape(work["lectura_curatorial"])
-    visual_description = escape(work["descripcion_visual"])
-    alt_text = escape(work["alt_text"], quote=True)
-    keywords = work["palabras_clave"]
+
+    category_class = category_classes.get(
+        work["category"].lower(),
+        "general"
+    )
+
+    image = esc(
+        work["image"],
+        quote=True
+    )
+
+    description = esc(
+        work["description"]
+    )
+
+    visual_description = esc(
+        work["descripcion_visual"]
+    )
+
+    reading = esc(
+        work["lectura_curatorial"]
+    )
+
+    alt_text = esc(
+        work["alt_text"],
+        quote=True
+    )
+
     keywords_html = "".join(
-        f'<li>{escape(str(keyword))}</li>'
-        for keyword in keywords
+        f"<li>{esc(keyword)}</li>"
+        for keyword in work["palabras_clave"]
     )
-    related_ids = work["obras_relacionadas"]
-    related_links = []
-    works_by_id = {item["id"]: item for item in works}
 
-    for related_id in related_ids:
+    related_html = []
+
+    for related_id in work["obras_relacionadas"]:
+
         related = works_by_id.get(related_id)
-        if related:
-            related_links.append(
-                f'<a href="../obras/obra-{related["id"]:02d}.html">'
-                f'<span>{related["id"]:02d}</span>'
-                f'<strong>{escape(related["title"])}</strong>'
-                f'</a>'
-            )
 
-    editorial_status = work["estado_curatorial"]
+        if not related:
+            continue
 
-    previous = (
-        f'''
-        <a class="nav-link previous"
-           data-previous
-           href="../obras/obra-{works[index-1]["id"]:02d}.html">
-          <span class="nav-label">Anterior</span>
-          <span class="nav-title">{escape(works[index-1]["title"])}</span>
+        related_html.append(
+            f"""
+            <a
+              class="related-work"
+              href="obra-{related['id']:02d}.html"
+            >
+              <span class="related-number">
+                {related['id']:02d}
+              </span>
+
+              <span class="related-info">
+                <small>
+                  {esc(category_label(related['category']))}
+                </small>
+
+                <strong>
+                  {esc(related['title'])}
+                </strong>
+              </span>
+
+              <span class="related-arrow">↗</span>
+            </a>
+            """
+        )
+
+    related_html = "".join(related_html)
+
+    previous_html = ""
+
+    if index > 0:
+
+        previous = works[index - 1]
+
+        previous_html = f"""
+        <a
+          class="work-nav previous"
+          href="obra-{previous['id']:02d}.html"
+        >
+          <span class="work-nav-label">
+            ← Anterior
+          </span>
+
+          <strong>
+            {esc(previous['title'])}
+          </strong>
+
+          <small>
+            {previous['id']:02d} / {total}
+          </small>
         </a>
-        '''
-        if index > 0
-        else '<span class="nav-empty"></span>'
-    )
+        """
 
-    next_link = (
-        f'''
-        <a class="nav-link next"
-           data-next
-           href="../obras/obra-{works[index+1]["id"]:02d}.html">
-          <span class="nav-label">Siguiente</span>
-          <span class="nav-title">{escape(works[index+1]["title"])}</span>
+    next_html = ""
+
+    if index < len(works) - 1:
+
+        following = works[index + 1]
+
+        next_html = f"""
+        <a
+          class="work-nav next"
+          href="obra-{following['id']:02d}.html"
+        >
+          <span class="work-nav-label">
+            Siguiente →
+          </span>
+
+          <strong>
+            {esc(following['title'])}
+          </strong>
+
+          <small>
+            {following['id']:02d} / {total}
+          </small>
         </a>
-        '''
-        if index < len(works) - 1
-        else '<span class="nav-empty"></span>'
-    )
+        """
 
-    meta_description = escape(
+    meta_description = esc(
         f"{work['description']} "
         f"{work['title']} · "
         "Bernardo León Mejía Rivera · "
@@ -183,13 +272,21 @@ for index, work in enumerate(works):
         quote=True
     )
 
-    html = f"""<!DOCTYPE html>
+    html = f"""<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>{title} · Lienzos del Alma</title>
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+>
+
+<title>
+{title} · Lienzos del Alma
+</title>
 
 <meta
   name="description"
@@ -203,7 +300,7 @@ for index, work in enumerate(works):
 
 <meta
   property="og:description"
-  content="{escape(description, quote=True)}"
+  content="{esc(work['description'], quote=True)}"
 >
 
 <meta
@@ -211,30 +308,50 @@ for index, work in enumerate(works):
   content="{image}"
 >
 
-<meta property="og:type" content="article">
+<meta
+  property="og:type"
+  content="article"
+>
 
-<link rel="stylesheet" href="../css/obra.css">
+<link
+  rel="stylesheet"
+  href="../css/obra.css"
+>
+
 </head>
 
-<body>
-
-<div class="obra-page">
+<body
+  class="obra-page category-{category_class}"
+>
 
 <header class="obra-header">
 
-  <a class="brand" href="../index.html">
+  <a
+    class="museum-brand"
+    href="../index.html"
+  >
 
-    <strong>Lienzos del Alma</strong>
+    <span class="brand-name">
+      LIENZOS DEL ALMA
+    </span>
 
-    <span>
+    <span class="brand-artist">
       Bernardo León Mejía Rivera
     </span>
 
   </a>
 
-  <a class="back" href="../index.html#galeria">
-    <span aria-hidden="true">←</span>
-    Colección
+  <a
+    class="collection-back"
+    href="../coleccion.html"
+  >
+
+    <span>←</span>
+
+    <span>
+      Colección
+    </span>
+
   </a>
 
 </header>
@@ -242,71 +359,137 @@ for index, work in enumerate(works):
 
 <main class="obra-main">
 
-  <div class="obra-intro">
+  <!-- ==================================================
+       IDENTIDAD
+       ================================================== -->
 
-    <div class="obra-index">
-      {number} / {len(works)}
+  <section class="work-identity">
+
+    <div class="work-number">
+
+      <span>
+        {number}
+      </span>
+
+      <small>
+        / {total}
+      </small>
+
     </div>
 
-    <p class="obra-kicker">
-      {category}
-    </p>
+    <div class="work-heading">
 
-    <h1 class="obra-title">
-      {title}
-    </h1>
+      <p class="work-category">
+        {category}
+      </p>
 
-    <p class="obra-artist">
-      Bernardo León Mejía Rivera
-    </p>
+      <h1>
+        {title}
+      </h1>
 
-  </div>
+      <p class="work-artist">
+        Bernardo León Mejía Rivera
+      </p>
+
+    </div>
+
+  </section>
 
 
-  <figure class="obra-stage">
+  <!-- ==================================================
+       OBRA
+       ================================================== -->
 
-    <img
-      class="obra-image"
-      src="{image}"
-      alt="{escape(work["alt_text"], quote=True)}"
-      loading="eager"
-      decoding="async"
-      draggable="false"
+  <figure class="artwork">
+
+    <button
+      class="artwork-button"
+      type="button"
+      aria-label="Ampliar {title}"
     >
 
+      <img
+        src="{image}"
+        alt="{alt_text}"
+        class="artwork-image"
+        loading="eager"
+        decoding="async"
+        draggable="false"
+      >
+
+      <span class="artwork-expand">
+        ampliar ↗
+      </span>
+
+    </button>
+
     <figcaption>
-      {title} · {category}
+
+      <span>
+        {title}
+      </span>
+
+      <span>
+        {number} / {total}
+      </span>
+
     </figcaption>
 
   </figure>
 
 
-  <section class="obra-editorial">
+  <!-- ==================================================
+       SOBRE LA OBRA
+       ================================================== -->
 
-    <div class="editorial-main">
+  <section class="museum-section introduction">
 
-      <p class="editorial-label">
+    <div class="section-marker">
+
+      <span>01</span>
+
+      <span>
         Sobre la obra
-      </p>
+      </span>
 
-      <p class="obra-description">
+    </div>
+
+    <div class="section-content">
+
+      <p class="lead-text">
         {description}
       </p>
 
     </div>
 
+  </section>
 
-    <aside class="obra-record">
 
-      <p class="editorial-label">
-        Ficha
-      </p>
+  <!-- ==================================================
+       FICHA
+       ================================================== -->
+
+  <section class="museum-section record">
+
+    <div class="section-marker">
+
+      <span>02</span>
+
+      <span>
+        Ficha del museo
+      </span>
+
+    </div>
+
+    <div class="record-content">
 
       <dl>
 
         <div>
           <dt>Artista</dt>
-          <dd>Bernardo León Mejía Rivera</dd>
+          <dd>
+            Bernardo León Mejía Rivera
+          </dd>
         </div>
 
         <div>
@@ -320,91 +503,187 @@ for index, work in enumerate(works):
         </div>
 
         <div>
-          <dt>Ubicación asociada</dt>
-          <dd>Copacabana · Antioquia · Colombia</dd>
+          <dt>Archivo</dt>
+          <dd>{number} / {total}</dd>
+        </div>
+
+        <div>
+          <dt>Lugar asociado</dt>
+          <dd>
+            Copacabana · Antioquia · Colombia
+          </dd>
         </div>
 
       </dl>
-
-    </aside>
-
-  </section>
-
-
-  <section class="obra-visual-description">
-
-    <p class="editorial-label">
-      Lo que vemos
-    </p>
-
-    <p class="visual-description">
-      {visual_description}
-    </p>
-
-  </section>
-
-
-  <section class="obra-reading">
-
-    <p class="editorial-label">
-      Una mirada
-    </p>
-
-    <div class="reading-copy">
-
-      <p>
-        {reading}
-      </p>
 
     </div>
 
   </section>
 
 
-  <section class="obra-keywords">
+  <!-- ==================================================
+       MIRAR
+       ================================================== -->
 
-    <p class="editorial-label">
+  <section class="looking">
+
+    <div class="looking-intro">
+
+      <span class="looking-number">
+        03
+      </span>
+
+      <span>
+        Mirar
+      </span>
+
+    </div>
+
+
+    <div class="looking-content">
+
+      <div class="looking-block">
+
+        <p class="looking-label">
+          Lo que vemos
+        </p>
+
+        <p class="looking-text">
+          {visual_description}
+        </p>
+
+      </div>
+
+
+      <div class="looking-block">
+
+        <p class="looking-label">
+          Una mirada
+        </p>
+
+        <p class="looking-text">
+          {reading}
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       PALABRAS CLAVE
+       ================================================== -->
+
+  <section class="keywords">
+
+    <p class="keywords-label">
       Palabras clave
     </p>
 
-    <ul class="obra-keywords-list">
+    <ul>
       {keywords_html}
     </ul>
 
   </section>
 
 
-  <section class="obra-related">
+  <!-- ==================================================
+       RELACIONADAS
+       ================================================== -->
 
-    <p class="editorial-label">
-      Obras relacionadas
-    </p>
+  <section class="related">
+
+    <div class="related-heading">
+
+      <span>
+        04
+      </span>
+
+      <h2>
+        El recorrido continúa
+      </h2>
+
+      <p>
+        Otras obras de la colección.
+      </p>
+
+    </div>
 
     <div class="related-list">
-      {"".join(related_links)}
+      {related_html}
     </div>
 
   </section>
 
 
+  <!-- ==================================================
+       NAVEGACIÓN
+       ================================================== -->
+
   <nav
-    class="obra-navigation"
+    class="work-navigation"
     aria-label="Navegación entre obras"
   >
 
-    {previous}
+    <div class="navigation-side">
+      {previous_html}
+    </div>
 
     <a
-      class="collection-link"
-      href="../index.html#galeria"
+      class="navigation-collection"
+      href="../coleccion.html"
     >
-      <span class="collection-symbol">✦</span>
-      <span>Ver colección</span>
+
+      <span>✦</span>
+
+      <small>
+        Volver a la colección
+      </small>
+
     </a>
 
-    {next_link}
+    <div class="navigation-side">
+      {next_html}
+    </div>
 
   </nav>
+
+
+  <!-- ==================================================
+       CONTACTO
+       ================================================== -->
+
+  <section class="contact">
+
+    <p class="contact-eyebrow">
+      LIENZOS DEL ALMA
+    </p>
+
+    <h2>
+      ¿Esta obra<br>
+      <em>te encontró?</em>
+    </h2>
+
+    <p class="contact-text">
+      Si deseas conocer más sobre esta pieza,
+      conversar sobre el trabajo de Bernardo León
+      Mejía Rivera o realizar una consulta,
+      puedes escribir directamente.
+    </p>
+
+    <a
+      class="contact-link"
+      href="https://wa.me/573222201931"
+      target="_blank"
+      rel="noopener"
+    >
+      Conversar sobre esta obra
+      <span>↗</span>
+    </a>
+
+  </section>
 
 </main>
 
@@ -412,7 +691,9 @@ for index, work in enumerate(works):
 <footer class="obra-footer">
 
   <div>
-    <strong>Lienzos del Alma</strong>
+    <strong>
+      LIENZOS DEL ALMA
+    </strong>
   </div>
 
   <div>
@@ -423,8 +704,16 @@ for index, work in enumerate(works):
     Copacabana · Antioquia · Colombia
   </div>
 
+  <div>
+    © 2026
+  </div>
+
 </footer>
 
+
+<!-- ====================================================
+     LIGHTBOX
+     ==================================================== -->
 
 <div
   class="lightbox"
@@ -433,6 +722,7 @@ for index, work in enumerate(works):
 
   <button
     class="lightbox-close"
+    type="button"
     aria-label="Cerrar imagen"
   >
     ×
@@ -445,8 +735,6 @@ for index, work in enumerate(works):
 
 </div>
 
-</div>
-
 
 <script src="../js/obra.js"></script>
 
@@ -455,20 +743,24 @@ for index, work in enumerate(works):
 """
 
     output = OUT / f"obra-{number}.html"
-    html = "\n".join(line.rstrip() for line in html.splitlines()) + "\n"
-    output.write_text(html, encoding="utf-8")
+
+    output.write_text(
+        "\n".join(
+            line.rstrip()
+            for line in html.splitlines()
+        ) + "\n",
+        encoding="utf-8"
+    )
 
 
-print(f"OK: {len(works)} páginas preparadas.")
+print(
+    f"OK: {len(works)} páginas de museo generadas."
+)
 
 for work in works:
-    label = labels.get(
-        work["category"],
-        work["category"]
-    )
 
     print(
         f"{work['id']:02d} · "
         f"{work['title']} · "
-        f"{label}"
+        f"{category_label(work['category'])}"
     )
